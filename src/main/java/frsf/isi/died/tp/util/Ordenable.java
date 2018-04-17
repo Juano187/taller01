@@ -11,5 +11,6 @@ public interface Ordenable {
 	 * Retorna un valor entero que será utilizado por un servicio de ordenamiento de listas
 	 * @return ordenable
 	 */
-	public int valor();
+	
+	 public int valor();
 }

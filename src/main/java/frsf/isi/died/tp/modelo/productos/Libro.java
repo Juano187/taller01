@@ -1,4 +1,5 @@
-/*
+
+ /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
@@ -86,13 +87,13 @@ public class Libro extends MaterialCapacitacion {
 	@Override
 	public Boolean esLibro() {
 		//TODO 03: implementar metodo abstracto
-		return null;
+		return true;
 	}
 
 	@Override
 	public Boolean esVideo() {
 		//TODO 04: implementar metodo abstracto
-		return null;
+		return false;
 	}
 
 	/**
@@ -109,7 +110,12 @@ public class Libro extends MaterialCapacitacion {
 	@Override
 	public Double precio() {
 		//TODO 05: implementar metodo abstracto
-		return null;
+		Double precio;
+		
+		precio = this.costo + (this.precioCompra * (1.0+ (0.03 * this.paginas/150)) );
+		
+		return precio;
+		
 	}
 
 	

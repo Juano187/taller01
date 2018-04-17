@@ -18,6 +18,7 @@ public interface Biblioteca {
 	 * @param material
 	 */
 	public void agregar(MaterialCapacitacion material);
+		
 
 	/**
 	 * Retorna la cantidad de materiales de capacitacion que se encuentran en el sistema 

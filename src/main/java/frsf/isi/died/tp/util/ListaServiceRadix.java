@@ -59,6 +59,10 @@ package frsf.isi.died.tp.util;
  */
 public class ListaServiceRadix extends ListasService {
 
+	
+
+	private static final Ordenable NULL = null;
+
 	/**
 	 * Matriz de 10 x 10 que permite almacenar en cada indice el elemento ordenable
 	 * asociado al residuo.
@@ -80,12 +84,31 @@ public class ListaServiceRadix extends ListasService {
 	public void ordenar() {
 
 		for (int i = 0; i < 5; i++) {
+			
 			// calcular la base de la posicion actual
 			// para la unidad es 1, para la decena 10, para la centena 100
 			// asi el numero 237 se puede descomponer en 2*100 + 3*10 + 7* 1
+			
 			int peso = (int) Math.pow(10.0, i);
-
+			
 			for (Ordenable mat : this.arregloOrdenable) {
+				
+				
+				
+				if(mat != NULL) {
+					int p= mat.valor();
+					
+					int unidad = (p/peso)%10; 
+					
+					
+					int cantf=cantidadPorFila[unidad];
+					
+					
+					residuos[unidad][cantf] = mat;
+					cantidadPorFila[unidad]++;	
+				}
+				
+				
 				// TODO 11: IMPLEMENTAR el ALGORITMO que chequea el residuo 
 				// e inserta el elemento en la posicion de la matriz de residuos
 				// e incrementa el contador en cantidadPorFila en 1
