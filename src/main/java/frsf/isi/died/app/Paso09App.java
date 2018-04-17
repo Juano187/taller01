@@ -4,7 +4,7 @@ import frsf.isi.died.tp.modelo.Biblioteca;
 import frsf.isi.died.tp.modelo.BibliotecaArray;
 import frsf.isi.died.tp.modelo.productos.Libro;
 import frsf.isi.died.tp.modelo.productos.MaterialCapacitacion;
-//import frsf.isi.died.tp.modelo.productos.Video;
+import frsf.isi.died.tp.modelo.productos.Video;
 
 public class Paso09App {
 	
