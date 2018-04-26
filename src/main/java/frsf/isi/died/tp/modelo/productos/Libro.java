@@ -118,6 +118,15 @@ public class Libro extends MaterialCapacitacion {
 		
 	}
 
-	
+	@Override
+	public boolean equals(Object a){
+		
+		if (a instanceof Libro) {
+			return super.equals(a);
+		}
+		else {
+			return false;
+		}
+	}
 
 }

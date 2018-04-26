@@ -10,7 +10,6 @@ public class Video extends MaterialCapacitacion {
 	}
 	
 	public Video(Integer id,String titulo) {
-		
 	}
 	
 	public Video(Integer id, String titulo, Double costo, Integer duracion) {
@@ -45,13 +44,16 @@ public class Video extends MaterialCapacitacion {
 	}
 
 	
+	@Override
+	public boolean equals(Object a){
+		
+		if (a instanceof Video) {
+			return super.equals(a);
+		}
+		else {
+			return false;
+		}
+	}
 	
-	
-	
-	
-	
-	
-	
-	
-	
+
 }

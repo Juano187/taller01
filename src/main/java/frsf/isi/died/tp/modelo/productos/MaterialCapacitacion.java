@@ -135,5 +135,11 @@ public abstract class MaterialCapacitacion implements Ordenable {
 		return p;
 	}
 	
-
+	
+	@Override
+	public boolean equals(Object o) {
+		
+			return this.titulo.equalsIgnoreCase(((MaterialCapacitacion) o).titulo);	
+	
+	}
 }
