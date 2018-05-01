@@ -21,7 +21,7 @@ import frsf.isi.died.tp.util.Ordenable;
 		* 3. Novillo Saravia, Pilar
 		* URL:  https://github.com/Juano187/taller01.git
 	 */
-public abstract class MaterialCapacitacion implements Ordenable, Comparable {
+public abstract class MaterialCapacitacion implements Ordenable, Comparable<Object> {
 	
 	protected Integer id;
 	/**
@@ -143,16 +143,19 @@ public abstract class MaterialCapacitacion implements Ordenable, Comparable {
 	
 	}
 	
-	
+	@Override
 	public int compareTo(Object o) {
 		
 		if(this.titulo.equals(((MaterialCapacitacion) o).titulo )) {
-			return 0;
-		}
-		else {
+		
 			return this.precio().compareTo(((MaterialCapacitacion) o).precio());
 		
 		}
+		else {
+			return this.titulo.compareTo(((MaterialCapacitacion) o).titulo);
+		}
 		
 	}
+	
+	
 }

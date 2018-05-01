@@ -10,6 +10,8 @@ public class Video extends MaterialCapacitacion {
 	}
 	
 	public Video(Integer id,String titulo) {
+		this.id=id;
+		this.titulo=titulo;
 	}
 	
 	public Video(Integer id, String titulo, Double costo, Integer duracion) {
