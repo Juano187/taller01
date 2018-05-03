@@ -54,6 +54,8 @@ public interface Biblioteca {
 	 * @param b
 	 */
 	public void ordenarPorPrecio(Boolean b);
+	
+	public MaterialCapacitacion buscar(Integer costo);
 
 	
 

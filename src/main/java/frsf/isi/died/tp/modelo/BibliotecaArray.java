@@ -108,6 +108,13 @@ public class BibliotecaArray implements Biblioteca{
 	public Collection<MaterialCapacitacion> materiales() {
 		return Arrays.asList(this.materialCapacitacion);
 	}
+	
+	@Override
+	public MaterialCapacitacion buscar(Integer precio) {
+	// TODO Auto-generated method stub
+	return null;
+	}
+
 
 
 
