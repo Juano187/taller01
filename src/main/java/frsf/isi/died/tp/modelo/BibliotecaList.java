@@ -88,10 +88,8 @@ public class BibliotecaList implements Biblioteca {
 	}
 	
 	private MaterialCapacitacion buscadorBinario(Integer i,Integer f, Integer c){
-			
-		   
-			
-				int centro;
+					
+			 int centro;
 				
 		     centro= (f+i)/2;
 		     
@@ -108,11 +106,6 @@ public class BibliotecaList implements Biblioteca {
 		       
 		       return buscadorBinario(centro+1,f,c);
 		     }
-		
-		   
-		  
+				  
 	}
-	
-	
-
 }

@@ -1,7 +1,9 @@
 package frsf.isi.died.tp.modelo;
 
+import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Comparator;
+import java.util.List;
 
 import frsf.isi.died.tp.estructuras.Arbol;
 import frsf.isi.died.tp.estructuras.ArbolBinarioBusqueda;
@@ -47,7 +49,8 @@ public class BibliotecaABB implements Biblioteca {
 	public Collection<MaterialCapacitacion> materiales() {
 		// TODO RETORNAR LA LISTA DEL ARBOL ORDENADA ASCENDENTEMENTE		
 		//TODO Completar
-		return null;		
+		
+		return this.materiales.inOrden();		
 	}
 
 	@Override
@@ -95,6 +98,16 @@ public class BibliotecaABB implements Biblioteca {
 		
 		//TODO Completar
 		
+		List<MaterialCapacitacion> lista = new ArrayList<MaterialCapacitacion>();
+		lista = this.materiales.inOrden();
+		lista.sort(comparaPrecio);
+		
+		this.materiales = new ArbolVacio();
+		
+		for (MaterialCapacitacion m : lista) {
+			this.materiales.add(m);
+		}	
+		
 	}
 	
 	private void ordenarPorTitulo() {
@@ -106,6 +119,16 @@ public class BibliotecaABB implements Biblioteca {
 		// BibliotecaABB el m�todo imprimir() o materiales()
 
 		//TODO Completar
+		
+		List<MaterialCapacitacion> lista = new ArrayList<MaterialCapacitacion>();
+		lista = this.materiales.inOrden();
+		lista.sort(comparaTitulo);
+		
+		this.materiales = new ArbolVacio();
+		
+		for (MaterialCapacitacion m : lista) {
+			this.materiales.add(m);
+		}
 	}
 
 }
