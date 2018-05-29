@@ -100,12 +100,13 @@ public class BibliotecaABB implements Biblioteca {
 		
 		List<MaterialCapacitacion> lista = new ArrayList<MaterialCapacitacion>();
 		lista = this.materiales.inOrden();
-		lista.sort(comparaPrecio);
 		
-		this.materiales = new ArbolVacio();
+		this.materiales = new ArbolBinarioBusqueda(lista.get(0),comparaPrecio);
+		
+		lista.remove(0);
 		
 		for (MaterialCapacitacion m : lista) {
-			this.materiales.add(m);
+			this.agregar(m);
 		}	
 		
 	}

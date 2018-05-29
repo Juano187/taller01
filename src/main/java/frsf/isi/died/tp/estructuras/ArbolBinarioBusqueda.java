@@ -157,9 +157,20 @@ public class ArbolBinarioBusqueda extends Arbol {
 	
 	@Override
 	public MaterialCapacitacion buscar(Integer precioBuscado) {
-		int comparacion =this.valor.precio().intValue()- precioBuscado.intValue(); 
-		// TODO completar
-		return null;
+		int comparacion = this.valor.precio().intValue() - precioBuscado.intValue(); 
+		
+		if (comparacion==0) {
+			return this.valor;
+		}
+		
+		if (comparacion<0) {
+			return (this.derecho.buscar(precioBuscado));
+		}
+		
+		else {
+			return (this.izquierdo.buscar(precioBuscado));
+		}
+				
 	}
 
 	@Override
